@@ -194,9 +194,14 @@ header .bar {
 }
 .hero-bg {
   position: absolute; inset: 0;
+}
+.hero-bg img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+.hero-bg .overlay {
+  position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 900px 500px at 80% 15%, hsla(38,45%,55%,.14), transparent 60%),
-    linear-gradient(155deg, #23281f 0%, #2b332a 55%, #1c211a 100%);
+    linear-gradient(155deg, hsla(90,15%,10%,.82) 0%, hsla(90,18%,13%,.72) 55%, hsla(90,15%,8%,.85) 100%);
 }
 .hero-pattern { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .95; }
 .hero-content { position: relative; z-index: 2; padding-block: 6rem; }
@@ -284,6 +289,36 @@ section { padding: 7rem 0; }
   font-size: .6875rem; letter-spacing: .1em; text-transform: uppercase;
   background: hsla(0,0%,100%,.85); color: var(--ink);
   padding: .5em .9em; border-radius: 999px;
+}
+
+/* ---------- Vraies photos ---------- */
+.photo-cover {
+  position: relative; border-radius: var(--radius); overflow: hidden;
+  background: var(--cream-2);
+}
+.photo-cover img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.photo-tag {
+  position: absolute; bottom: 14px; left: 14px;
+  font-size: .6875rem; letter-spacing: .1em; text-transform: uppercase;
+  background: hsla(0,0%,100%,.9); color: var(--ink);
+  padding: .5em .9em; border-radius: 999px;
+}
+
+/* ---------- Galerie photo ---------- */
+.gallery-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 190px;
+  grid-auto-flow: dense;
+  gap: 10px;
+}
+.gallery-grid .photo-cover { height: 100%; border-radius: 4px; }
+.gallery-grid .g-wide { grid-column: span 2; }
+.gallery-grid .g-tall { grid-row: span 2; }
+@media (max-width: 860px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 140px; }
+  .gallery-grid .g-wide { grid-column: span 2; }
+  .gallery-grid .g-tall { grid-row: span 1; }
 }
 
 /* ---------- Chambres grid (accueil preview + page dédiée) ---------- */

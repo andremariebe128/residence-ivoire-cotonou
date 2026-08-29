@@ -49,27 +49,8 @@
   <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="hero-bg" aria-hidden="true">
-      <svg class="hero-pattern" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="goldFade" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#d9bd8d" stop-opacity="0.5"/>
-            <stop offset="1" stop-color="#d9bd8d" stop-opacity="0"/>
-          </linearGradient>
-        </defs>
-        <g stroke="hsla(0,0%,100%,.08)" stroke-width="1" fill="none">
-          <path d="M0 620 C 300 560, 500 700, 800 600 S 1200 520, 1400 580" />
-          <path d="M0 700 C 320 650, 520 760, 820 680 S 1200 610, 1400 660" />
-        </g>
-        <g stroke="url(#goldFade)" stroke-width="1.2" fill="none">
-          <circle cx="1180" cy="220" r="150"/>
-          <circle cx="1180" cy="220" r="220"/>
-        </g>
-        <g fill="#d9bd8d" opacity=".7">
-          <circle cx="1180" cy="70" r="3"/>
-          <circle cx="960" cy="220" r="2.4"/>
-          <circle cx="1400" cy="300" r="2.4"/>
-        </g>
-      </svg>
+      <img src="assets/img/gallery/facade.jpg" alt="">
+      <div class="overlay"></div>
     </div>
     <div class="wrap hero-content">
       <p class="hero-eyebrow">Hôtel &amp; appartements meublés · Agla, Cotonou</p>
@@ -87,9 +68,8 @@
   <section class="wrap">
     <div class="intro-grid">
       <div class="reveal">
-        <div class="ph-photo intro-visual">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/><path d="M9 12h.01M15 12h.01M9 9h.01M15 9h.01"/></svg>
-          <span class="ph-label">Photo de la façade — à venir</span>
+        <div class="photo-cover intro-visual">
+          <img src="assets/img/gallery/bienvenue.jpg" alt="Chambre de la Résidence Ivoire">
         </div>
       </div>
       <div class="reveal reveal-d1">
@@ -116,8 +96,8 @@
     </div>
     <div class="rooms-grid">
       <div class="room-card reveal">
-        <div class="ph-photo">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
+        <div class="photo-cover" style="aspect-ratio:4/3; border-radius:0;">
+          <img src="assets/img/gallery/chambre-standard-1.jpg" alt="Chambre Standard — Résidence Ivoire">
         </div>
         <div class="room-card-body">
           <span class="tag">Hôtel</span>
@@ -134,8 +114,8 @@
         </div>
       </div>
       <div class="room-card reveal reveal-d1">
-        <div class="ph-photo">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
+        <div class="photo-cover" style="aspect-ratio:4/3; border-radius:0;">
+          <img src="assets/img/gallery/chambre-confort-1.jpg" alt="Chambre Confort — Résidence Ivoire">
         </div>
         <div class="room-card-body">
           <span class="tag">Best-seller</span>
@@ -152,13 +132,13 @@
         </div>
       </div>
       <div class="room-card reveal reveal-d2">
-        <div class="ph-photo">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
+        <div class="photo-cover" style="aspect-ratio:4/3; border-radius:0;">
+          <img src="assets/img/gallery/apt2-jacuzzi.jpg" alt="Appartement meublé avec jacuzzi — Résidence Ivoire">
         </div>
         <div class="room-card-body">
           <span class="tag">Signature</span>
           <h3>Appartement Meublé</h3>
-          <p>Un espace indépendant et entièrement meublé, idéal pour les séjours de plus longue durée.</p>
+          <p>Un espace indépendant et entièrement meublé — certains avec jacuzzi privé — pour les séjours de plus longue durée.</p>
           <div class="room-meta">
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12h20"/><path d="M6 12V8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4"/></svg>Wifi gratuit</span>
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1" y="6" width="20" height="12" rx="2"/></svg>Climatisé</span>
@@ -196,6 +176,25 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="1"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
       <h3>Réception 24h/24</h3>
       <p>Accueil et service d'étage disponibles à toute heure.</p>
+    </div>
+  </section>
+
+  <!-- ===== GALERIE ===== -->
+  <section class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">En images</p>
+      <h2>Un aperçu de la résidence</h2>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="photo-cover g-tall"><img src="assets/img/gallery/facade.jpg" alt="Façade de la Résidence Ivoire"></div>
+      <div class="photo-cover"><img src="assets/img/gallery/jardin-1.jpg" alt="Allée fleurie de la résidence"></div>
+      <div class="photo-cover"><img src="assets/img/gallery/evenement-salle.jpg" alt="Salle de réception pour événements"></div>
+      <div class="photo-cover g-tall"><img src="assets/img/gallery/apt2-salon.jpg" alt="Salon d'un appartement meublé"></div>
+      <div class="photo-cover"><img src="assets/img/gallery/chambre-confort-2.jpg" alt="Chambre confort"></div>
+      <div class="photo-cover"><img src="assets/img/gallery/evenement-1.jpg" alt="Réception dressée pour un événement"></div>
+    </div>
+    <div class="section-foot-center reveal">
+      <a href="chambres.html" class="btn btn-ghost">Voir toutes les chambres</a>
     </div>
   </section>
 
