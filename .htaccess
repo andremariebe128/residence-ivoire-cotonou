@@ -1,0 +1,26 @@
+# URLs propres sans extension .html
+# Serveurs Apache / LiteSpeed (LWS, OVH, Hostinger...).
+# Inerte sur Vercel, qui utilise vercel.json.
+
+# MultiViews peut interférer avec le rewrite : on le désactive
+<IfModule mod_negotiation.c>
+  Options -MultiViews
+</IfModule>
+
+RewriteEngine On
+
+# --- Redirections 301 (SEO : pas de contenu dupliqué entre /x et /x.html) ---
+# /index.html -> /
+RewriteCond %{THE_REQUEST} /index\.html[\s/?]
+RewriteRule ^index\.html$ / [R=301,L]
+
+# /services.html -> /services
+RewriteCond %{THE_REQUEST} \.html[\s/?]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+
+# --- Rendu interne (l'URL affichée ne change pas) ---
+# /services -> sert services.html s'il existe
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ /$1.html [L]
