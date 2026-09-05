@@ -1,6 +1,20 @@
-/* HÔTEL SOLANE — interactions (site vitrine, sans backend) */
+/* RÉSIDENCE IVOIRE — interactions (site vitrine, sans backend) */
+
+/* ==========================================================
+   INTERRUPTEUR ÉVÉNEMENTS
+   Passez EVENTS_ACTIVE à true dès qu'un événement est à l'affiche :
+   le bouton "Événements" apparaîtra automatiquement dans le menu
+   (desktop + mobile) sur toutes les pages. Repassez à false pour
+   le masquer à nouveau une fois l'événement terminé.
+   ========================================================== */
+var EVENTS_ACTIVE = false;
+
 (function () {
   'use strict';
+
+  if (!EVENTS_ACTIVE) {
+    document.querySelectorAll('.js-events-link').forEach(function (el) { el.remove(); });
+  }
 
   document.querySelectorAll('[data-year]').forEach(el => {
     el.textContent = new Date().getFullYear();
@@ -73,6 +87,17 @@
         );
         var waBtn = contactForm.querySelector('.whatsapp-btn');
         if (waBtn) waBtn.href = 'https://wa.me/2290162265555?text=' + waMsg;
+
+        var mailSubject = encodeURIComponent('Demande de réservation — ' + name);
+        var mailBody = encodeURIComponent(
+          'Nom : ' + name + '\n' +
+          'Téléphone : ' + phone + '\n' +
+          (dates ? 'Dates de séjour : ' + dates + '\n' : '') +
+          (guests ? 'Nombre de personnes : ' + guests + '\n' : '') +
+          'Message : ' + message
+        );
+        var mailBtn = contactForm.querySelector('.email-btn');
+        if (mailBtn) mailBtn.href = 'mailto:residenceivoire19@gmail.com?subject=' + mailSubject + '&body=' + mailBody;
 
         btn.disabled = false;
         btn.innerHTML = original;

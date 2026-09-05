@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="assets/img/favicon.png" rel="icon" type="image/png">
-  <title>Conditions — Résidence Ivoire Cotonou</title>
+  <meta name="description" content="Événements à la Résidence Ivoire Cotonou.">
+  <title>Événements — Résidence Ivoire Cotonou</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -12,6 +13,30 @@
 </head>
 <body>
 
+  <!--
+    ============================================================
+    PAGE ÉVÉNEMENT — MODE D'EMPLOI
+
+    1. Cette page reste toujours en ligne à l'adresse evenements.html,
+       mais le bouton "Événements" du menu n'apparaît que si vous
+       l'activez : ouvrez js/main.js et passez la ligne
+           var EVENTS_ACTIVE = false;
+       à
+           var EVENTS_ACTIVE = true;
+       Le bouton apparaît alors automatiquement dans le menu (desktop
+       et mobile) sur TOUTES les pages du site — aucune autre
+       modification n'est nécessaire.
+
+    2. Avant d'activer, remplacez le contenu ci-dessous (titre, date,
+       description, photo) par les informations de votre événement.
+       Les zones à modifier sont indiquées par la mention : À MODIFIER.
+
+    3. Quand l'événement est terminé, repassez EVENTS_ACTIVE à false
+       pour faire disparaître le bouton du menu.
+    ============================================================
+  -->
+
+  <!-- ===== HEADER ===== -->
   <header class="site-header">
     <div class="wrap bar">
       <a class="brand" href="index.html" aria-label="Résidence Ivoire — Accueil">
@@ -24,7 +49,7 @@
         <a class="nav-link" href="services.html">Services</a>
         <a class="nav-link" href="menu.html">Menu</a>
         <a class="nav-link" href="avis.html">Avis</a>
-        <a class="nav-link js-events-link" href="evenements.html">Événements</a>
+        <a class="nav-link active js-events-link" href="evenements.html">Événements</a>
         <a class="nav-link" href="contact.html">Contact</a>
         <a class="header-cta" href="contact.html">Réserver</a>
       </nav>
@@ -55,24 +80,57 @@
     </div>
   </div>
 
+  <!-- ===== INTRO ===== -->
   <section class="page-hero">
     <div class="wrap reveal visible">
-      <p class="eyebrow">Informations légales</p>
-      <h1>Conditions d'utilisation</h1>
+      <p class="eyebrow">Événement à la une</p>
+      <!-- À MODIFIER : titre de l'événement -->
+      <h1>Titre de votre événement</h1>
+      <!-- À MODIFIER : date et description courte -->
+      <p class="lead">Date et courte description de l'événement à venir à la Résidence Ivoire.</p>
     </div>
   </section>
 
+  <!-- ===== DÉTAIL ===== -->
   <section class="wrap">
-    <div class="legal-content">
-      <h2>Objet du site</h2>
-      <p>Ce site présente les chambres, appartements, services et coordonnées de la Résidence Ivoire. Il s'agit d'une page de présentation : aucune réservation en ligne ni paiement ne sont traités directement sur le site. Toute demande de réservation est confirmée par échange direct avec l'équipe de la résidence, par téléphone, WhatsApp ou e-mail.</p>
-      <h2>Demandes de réservation</h2>
-      <p>Les tarifs affichés sont indicatifs et peuvent varier selon la saison, la disponibilité et la durée du séjour. Toute réservation est confirmée par la résidence après échange avec le client.</p>
-      <h2>Propriété intellectuelle</h2>
-      <p>Les textes, visuels et éléments graphiques de ce site sont la propriété de la Résidence Ivoire et ne peuvent être reproduits sans autorisation préalable.</p>
+    <div class="room-detail reveal">
+      <div class="room-detail-visual">
+        <!-- À MODIFIER : photo de l'événement -->
+        <div class="photo-cover" style="aspect-ratio:5/4;">
+          <img src="assets/img/gallery/evenement-salle.jpg" alt="Événement à la Résidence Ivoire">
+        </div>
+      </div>
+      <div class="room-detail-text">
+        <span class="tag">Événement</span>
+        <!-- À MODIFIER : titre + texte détaillé -->
+        <h2>Titre de votre événement</h2>
+        <p>Décrivez ici le programme, les horaires, et tout ce que vos clients doivent savoir pour y participer.</p>
+        <ul class="room-amenity-list">
+          <li>Date à préciser</li>
+          <li>Lieu : Résidence Ivoire, Agla</li>
+          <li>Entrée : à préciser</li>
+          <li>Réservation conseillée</li>
+        </ul>
+        <a href="https://wa.me/2290162265555" target="_blank" rel="noopener" class="btn btn-ghost" style="margin-top:1.6rem;">Réserver ma place</a>
+      </div>
     </div>
   </section>
 
+  <!-- ===== CTA ===== -->
+  <section class="wrap" style="padding-top:0;">
+    <div class="cta-banner reveal">
+      <div>
+        <h2>Des questions sur cet événement ?</h2>
+        <p>Contactez-nous directement, nous vous répondons rapidement.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="https://wa.me/2290162265555" target="_blank" rel="noopener" class="btn btn-gold">Écrire sur WhatsApp</a>
+        <a href="tel:+2290162265555" class="btn btn-outline-light">Appeler</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
     <div class="wrap footer-main">
       <div class="footer-cols">

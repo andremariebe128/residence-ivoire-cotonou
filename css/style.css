@@ -322,7 +322,7 @@ section { padding: 7rem 0; }
 }
 
 /* ---------- Chambres grid (accueil preview + page dédiée) ---------- */
-.rooms-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
+.rooms-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
 .room-card {
   background: var(--white); border-radius: var(--radius);
   overflow: hidden; box-shadow: var(--shadow-sm);
@@ -357,6 +357,7 @@ section { padding: 7rem 0; }
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
   background: var(--border); border: 1px solid var(--border);
 }
+.amenities-grid-3col { grid-template-columns: repeat(3, 1fr); }
 .amenity-card {
   background: var(--cream); padding: 2.5rem 2rem; text-align: center;
 }
@@ -561,3 +562,120 @@ footer.site-footer { background: var(--ink); color: hsla(42, 25%, 94%, .82); }
   section { padding: 4.5rem 0; }
   .wrap { padding-inline: 22px; }
 }
+
+/* ============================================================
+   AJOUTS — v2 (menu, avis, événements, social, maps)
+   ============================================================ */
+
+/* ---------- Sous-titre marque (Hôtel & Restaurant) ---------- */
+.brand-word .tagline {
+  display: block; font-size: .625rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--ink-soft); margin-top: .3em; font-family: var(--font-body);
+}
+
+/* ---------- Icônes sociales ---------- */
+.social-icons { display: flex; gap: .9rem; align-items: center; }
+.social-icons a {
+  display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 1px solid hsla(0,0%,100%,.18); color: hsla(42, 25%, 94%, .8);
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+.social-icons a:hover { background: var(--gold); border-color: var(--gold); color: #fff; }
+.social-icons svg { width: 16px; height: 16px; }
+.footer-social { margin-top: 1.5rem; }
+
+/* Variante claire (utilisée hors footer si besoin) */
+.social-icons.light a { border-color: var(--border); color: var(--ink-soft); }
+.social-icons.light a:hover { background: var(--gold); border-color: var(--gold); color: #fff; }
+
+/* ---------- Bouton Maps ---------- */
+.maps-btn {
+  display: inline-flex; align-items: center; gap: .6em;
+  font-size: .8125rem; font-weight: 600; letter-spacing: .06em;
+  color: var(--gold); margin-top: .5em;
+  border-bottom: 1px solid transparent; transition: border-color .2s ease;
+}
+.maps-btn:hover { border-color: var(--gold); }
+.maps-btn svg { width: 16px; height: 16px; }
+
+/* ---------- Page Menu ---------- */
+.menu-hero-strip {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px;
+  height: 130px; overflow: hidden;
+}
+.menu-hero-strip img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.menu-cats { display: flex; flex-direction: column; gap: 4rem; }
+.menu-cat-head { display: flex; align-items: center; gap: 1em; margin-bottom: 1.6rem; }
+.menu-cat-head svg { width: 24px; height: 24px; color: var(--gold); flex-shrink: 0; }
+.menu-cat-head h3 { margin-bottom: 0; font-size: 1.375rem; }
+.menu-items { display: grid; grid-template-columns: 1fr 1fr; gap: .3rem 3rem; }
+.menu-item {
+  display: flex; align-items: baseline; gap: .5em;
+  padding: .55em 0; border-bottom: 1px dotted var(--border);
+}
+.menu-item .mname { font-weight: 500; font-size: .9688rem; }
+.menu-item .mname .desc { display: block; font-weight: 400; font-size: .8125rem; color: var(--ink-soft); font-family: var(--font-body); margin-top: .15em; }
+.menu-item .mfill { flex: 1; border-bottom: 1px dotted var(--sand); transform: translateY(-4px); }
+.menu-item .mprice { font-family: var(--font-display); font-size: 1.0625rem; color: var(--gold); white-space: nowrap; }
+.menu-photo-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 1.75rem; }
+.menu-note {
+  background: var(--cream-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 1.5rem 1.75rem; margin-top: 1rem;
+}
+.menu-note h4 { font-size: .9375rem; margin-bottom: .6em; }
+.menu-note ul { display: grid; grid-template-columns: repeat(3,1fr); gap: .4em 1.5em; }
+.menu-note li { font-size: .875rem; color: var(--ink-soft); padding-left: 1.1em; position: relative; }
+.menu-note li::before { content:""; position:absolute; left:0; top:.55em; width:4px; height:4px; border-radius:50%; background:var(--gold); }
+
+@media (max-width: 760px) {
+  .menu-items { grid-template-columns: 1fr; }
+  .menu-photo-row { grid-template-columns: repeat(2, 1fr); }
+  .menu-note ul { grid-template-columns: 1fr 1fr; }
+  .menu-hero-strip { grid-template-columns: repeat(2,1fr); height: auto; }
+}
+
+/* ---------- Page Avis ---------- */
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.review-card {
+  background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 2rem 1.75rem;
+}
+.review-card .stars { color: var(--gold); font-size: .9375rem; letter-spacing: .15em; margin-bottom: 1rem; }
+.review-card p { font-size: .9375rem; font-style: italic; color: var(--ink); margin-bottom: 1.2rem; }
+.review-card .who { font-size: .8125rem; color: var(--ink-soft); font-weight: 500; }
+.review-card .who span { display:block; font-size: .75rem; color: var(--muted-2, var(--ink-soft)); font-weight: 400; margin-top:.2em; }
+
+.tiktok-banner {
+  background: var(--ink); border-radius: var(--radius);
+  padding: 3.5rem 3rem; text-align: center; color: #fff;
+}
+.tiktok-banner h2 { color: #fff; }
+.tiktok-banner p { color: hsla(42, 25%, 94%, .7); max-width: 42ch; margin-inline: auto; }
+.tiktok-btn {
+  display: inline-flex; align-items: center; gap: .7em;
+  background: linear-gradient(90deg, #25F4EE, #FE2C55);
+  color: #fff; padding: 1em 2em; border-radius: 999px;
+  font-size: .8125rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  margin-top: 1.75rem; transition: transform .2s ease;
+}
+.tiktok-btn:hover { transform: translateY(-2px) scale(1.02); }
+.tiktok-btn svg { width: 20px; height: 20px; }
+
+@media (max-width: 860px) {
+  .reviews-grid { grid-template-columns: 1fr; }
+  .tiktok-banner { padding: 2.5rem 1.5rem; }
+}
+
+/* ---------- Formulaire contact — options d'envoi multiples ---------- */
+.success-actions { display: flex; flex-direction: column; gap: .75rem; margin-top: 1.25rem; align-items: center; }
+.contact-alt-btn {
+  display: inline-flex; align-items: center; gap: .6em;
+  border: 1px solid var(--border); color: var(--ink);
+  padding: .85em 1.6em; border-radius: var(--radius-lg);
+  font-size: .8125rem; letter-spacing: .08em; text-transform: uppercase;
+  transition: border-color .2s ease, background .2s ease;
+}
+.contact-alt-btn:hover { border-color: var(--ink); background: var(--cream-2); }
+.contact-alt-btn svg { width: 16px; height: 16px; }

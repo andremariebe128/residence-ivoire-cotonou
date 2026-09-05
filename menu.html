@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="assets/img/favicon.png" rel="icon" type="image/png">
+  <meta name="description" content="Découvrez le menu du restaurant de la Résidence Ivoire à Cotonou — cuisine locale et internationale raffinée.">
+  <title>Menu du Restaurant — Résidence Ivoire Cotonou</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="index.html" aria-label="Résidence Ivoire — Accueil">
+        <img class="logo-mark" src="assets/img/logo-ivoire-emblem.png" alt="Résidence Ivoire Cotonou">
+        <span class="brand-word">Résidence Ivoire<span class="sub">Hôtel &amp; Restaurant</span><span class="tagline">Cotonou · Bénin</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a class="nav-link" href="index.html">Accueil</a>
+        <a class="nav-link" href="chambres.html">Chambres</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link active" href="menu.html">Menu</a>
+        <a class="nav-link" href="avis.html">Avis</a>
+        <a class="nav-link js-events-link" href="evenements.html">Événements</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="header-cta" href="contact.html">Réserver</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Ouvrir le menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><line x1="3" x2="21" y1="7" y2="7"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="17" y2="17"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Fermer le menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+    <nav aria-label="Menu mobile">
+      <a href="index.html">Accueil</a>
+      <a href="chambres.html">Chambres</a>
+      <a href="services.html">Services</a>
+      <a href="menu.html">Menu</a>
+      <a href="avis.html">Avis</a>
+      <a class="js-events-link" href="evenements.html">Événements</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="btn btn-primary" href="contact.html">Réserver</a>
+    <div class="social-icons light footer-social">
+      <a href="https://www.instagram.com/residence.ivoire.ctn" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+      <a href="https://www.facebook.com/share/1ESPT5MooX/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      <a href="https://vm.tiktok.com/ZS9BTaHk381GV-KoE0A/" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+    </div>
+  </div>
+
+  <!-- ===== INTRO ===== -->
+  <section class="page-hero" style="padding-bottom:0;">
+    <div class="wrap reveal visible">
+      <p class="eyebrow">Restaurant</p>
+      <h1>Cuisine locale &amp; internationale raffinée</h1>
+      <p class="lead">Notre restaurant vous accueille pour un petit-déjeuner, un déjeuner ou un dîner — entre saveurs béninoises et classiques internationaux, dans un cadre chaleureux.</p>
+    </div>
+    <div class="menu-hero-strip">
+      <img src="assets/img/gallery/plat-poulet-riz.jpg" alt="Poulet braisé et riz">
+      <img src="assets/img/gallery/plat-poisson-couscous.jpg" alt="Poisson braisé et couscous">
+      <img src="assets/img/gallery/plat-salade.jpg" alt="Salade fraîche">
+      <img src="assets/img/gallery/restaurant-table.jpg" alt="Table dressée au restaurant">
+    </div>
+  </section>
+
+  <!-- ===== MENU ===== -->
+  <section class="wrap" style="padding-top:4rem;">
+    <div class="menu-cats">
+
+      <!-- Entrées -->
+      <div class="reveal">
+        <div class="menu-cat-head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 3 2 5 3 6l1 7h6l1-7c1-1 3-3 3-6a7 7 0 0 0-7-7Z"/></svg>
+          <h3>Entrées</h3>
+        </div>
+        <div class="menu-items">
+          <div class="menu-item"><span class="mname">Salade Niçoise<span class="desc">Salade fraîche composée (laitue, tomate, œufs, thon...)</span></span><span class="mfill"></span><span class="mprice">3 500 FCFA</span></div>
+          <div class="menu-item"><span class="mname">Salade de Crudités<span class="desc">Laitue, concombre, poivrons, chou, oignons, tomate, carotte</span></span><span class="mfill"></span><span class="mprice">3 000 FCFA</span></div>
+          <div class="menu-item"><span class="mname">Sandwich au Poulet</span><span class="mfill"></span><span class="mprice">1 500 FCFA</span></div>
+          <div class="menu-item"><span class="mname">Sandwich au Poisson</span><span class="mfill"></span><span class="mprice">1 500 FCFA</span></div>
+          <div class="menu-item"><span class="mname">Sandwich Viande Hachée</span><span class="mfill"></span><span class="mprice">1 500 FCFA</span></div>
+        </div>
+      </div>
+
+      <!-- Petit déjeuner -->
+      <div class="reveal">
+        <div class="menu-cat-head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>
+          <h3>Petit déjeuner</h3>
+        </div>
+        <div class="menu-items">
+          <div class="menu-item"><span class="mname">Le Basic<span class="desc">Boisson chaude + pain + beurre</span></span><span class="mfill"></span><span class="mprice">2 000 FCFA</span></div>
+          <div class="menu-item"><span class="mname">Le Gourmand<span class="desc">Boisson chaude + pain + œufs ou crêpes</span></span><span class="mfill"></span><span class="mprice">3 000 FCFA</span></div>
+          <div class="menu-item"><span class="mname">Omelette Provinciale</span><span class="mfill"></span><span class="mprice">2 500 FCFA</span></div>
+          <div class="menu-item"><span class="mname">Porridge (Bouillie)<span class="desc">Avoine / Tapioca / Akamu</span></span><span class="mfill"></span><span class="mprice">1 000 FCFA</span></div>
+          <div class="menu-item"><span class="mname">Café</span><span class="mfill"></span><span class="mprice">500 FCFA</span></div>
+          <div class="menu-item"><span class="mname">Thé <span class="desc">Lipton, menthe, vert</span></span><span class="mfill"></span><span class="mprice">500 FCFA</span></div>
+        </div>
+      </div>
+
+      <!-- Plats africains -->
+      <div class="reveal">
+        <div class="menu-cat-head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18M6 3v3a6 6 0 0 0 12 0V3M6 21h12M12 15v6"/></svg>
+          <h3>Plats africains</h3>
+        </div>
+        <div class="menu-items">
+          <div class="menu-item"><span class="mname">Kedjenou de Poulet</span><span class="mfill"></span><span class="mprice">3 000 FCFA</span></div>
+          <div class="menu-item"><span class="mname">Sauce Gombo</span><span class="mfill"></span><span class="mprice">3 000 FCFA</span></div>
+          <div class="menu-item"><span class="mname">Sauce Mamtindjan</span><span class="mfill"></span><span class="mprice">3 000 FCFA</span></div>
+          <div class="menu-item"><span class="mname">Foutou Banane</span><span class="mfill"></span><span class="mprice">3 500 FCFA</span></div>
+          <div class="menu-item"><span class="mname">Soupe de Poisson</span><span class="mfill"></span><span class="mprice">3 500 FCFA</span></div>
+          <div class="menu-item"><span class="mname">Sauce d'Arachide</span><span class="mfill"></span><span class="mprice">3 500 FCFA</span></div>
+          <div class="menu-item"><span class="mname">Foutou Igname</span><span class="mfill"></span><span class="mprice">3 500 FCFA</span></div>
+        </div>
+        <div class="menu-photo-row">
+          <div class="photo-cover" style="aspect-ratio:1;"><img src="assets/img/gallery/plat-sauce-riz.jpg" alt="Sauce traditionnelle et riz"></div>
+          <div class="photo-cover" style="aspect-ratio:1;"><img src="assets/img/gallery/plat-poisson-attieke.jpg" alt="Poisson et attiéké"></div>
+          <div class="photo-cover" style="aspect-ratio:1;"><img src="assets/img/gallery/plat-viande-riz.jpg" alt="Viande et riz"></div>
+          <div class="photo-cover" style="aspect-ratio:1;"><img src="assets/img/gallery/plat-sauce-igname.jpg" alt="Sauce et igname"></div>
+        </div>
+      </div>
+
+      <!-- Spaghetti -->
+      <div class="reveal">
+        <div class="menu-cat-head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21c4-1 4-4 2-6-2-2-5-2-6 2M8 21c4-1 6-5 4-9-1-3-1-6 2-8M12 21c4-1 6-6 3-11M16 21c3-2 4-6 2-10"/></svg>
+          <h3>Spaghetti</h3>
+        </div>
+        <div class="menu-items">
+          <div class="menu-item"><span class="mname">Spaghetti Bolognaise</span><span class="mfill"></span><span class="mprice">3 000 FCFA</span></div>
+        </div>
+      </div>
+
+      <!-- Plats -->
+      <div class="reveal">
+        <div class="menu-cat-head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7a4 4 0 0 0 4 4v9"/><path d="M7 2v7"/><path d="M11 2v7"/><path d="M17 2c-2 2-2 5-2 7a3 3 0 0 0 3 3v9"/></svg>
+          <h3>Plats</h3>
+        </div>
+        <div class="menu-items">
+          <div class="menu-item"><span class="mname">Filet de Bœuf</span><span class="mfill"></span><span class="mprice">5 000 FCFA</span></div>
+          <div class="menu-item"><span class="mname">½ Poulet Braisé</span><span class="mfill"></span><span class="mprice">3 500 FCFA</span></div>
+          <div class="menu-item"><span class="mname">Poisson Braisé<span class="desc">Selon arrivage</span></span><span class="mfill"></span><span class="mprice">Dès 4 000 FCFA</span></div>
+          <div class="menu-item"><span class="mname">Brochette de Bœuf</span><span class="mfill"></span><span class="mprice">4 000 FCFA</span></div>
+          <div class="menu-item"><span class="mname">Brochette de Poulet</span><span class="mfill"></span><span class="mprice">4 000 FCFA</span></div>
+          <div class="menu-item"><span class="mname">Poulet Choukouya</span><span class="mfill"></span><span class="mprice">4 000 FCFA</span></div>
+        </div>
+        <div class="menu-photo-row">
+          <div class="photo-cover" style="aspect-ratio:1;"><img src="assets/img/gallery/plat-brochette-boeuf.jpg" alt="Brochette de bœuf"></div>
+          <div class="photo-cover" style="aspect-ratio:1;"><img src="assets/img/gallery/plat-demi-poulet.jpg" alt="Demi poulet braisé"></div>
+          <div class="photo-cover" style="aspect-ratio:1;"><img src="assets/img/gallery/plat-poisson-riz.jpg" alt="Poisson braisé et riz"></div>
+          <div class="photo-cover" style="aspect-ratio:1;"><img src="assets/img/gallery/plat-poulet-riz.jpg" alt="Poulet, riz et plantain"></div>
+        </div>
+      </div>
+
+      <!-- Accompagnements -->
+      <div class="reveal">
+        <div class="menu-note">
+          <h4>Accompagnements — Supplément 1 000 FCFA</h4>
+          <ul>
+            <li>Riz</li><li>Frites</li><li>Aloco</li>
+            <li>Pâte blanche</li><li>Pâte rouge</li><li>Attiéké</li>
+            <li>Pommes sautées</li><li>Légumes sautés</li><li>Haricots verts sautés</li>
+            <li>Akassa</li><li>Couscous au raisin</li><li>Igname</li>
+            <li>Foutou</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Desserts -->
+      <div class="reveal">
+        <div class="menu-cat-head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21h16"/><path d="M6 21c-1-5 1-9 6-9s7 4 6 9"/><path d="M12 12V7"/><path d="M9 5a3 3 0 0 1 6 0"/></svg>
+          <h3>Desserts</h3>
+        </div>
+        <div class="menu-items">
+          <div class="menu-item"><span class="mname">Salade de Fruits</span><span class="mfill"></span><span class="mprice">3 000 FCFA</span></div>
+          <div class="menu-item"><span class="mname">Crêpe au Sucre</span><span class="mfill"></span><span class="mprice">1 000 FCFA</span></div>
+          <div class="menu-item"><span class="mname">Crêpe Nutella</span><span class="mfill"></span><span class="mprice">1 500 FCFA</span></div>
+          <div class="menu-item"><span class="mname">Crêpe au Beurre</span><span class="mfill"></span><span class="mprice">1 300 FCFA</span></div>
+          <div class="menu-item"><span class="mname">Gaufre au Sucre</span><span class="mfill"></span><span class="mprice">1 500 FCFA</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="wrap">
+    <div class="cta-banner reveal">
+      <div>
+        <h2>Une envie, une réservation de table ?</h2>
+        <p>Le restaurant est ouvert à tous, résidents comme visiteurs de passage.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="https://wa.me/2290162265555" target="_blank" rel="noopener" class="btn btn-gold">Écrire sur WhatsApp</a>
+        <a href="tel:+2290162265555" class="btn btn-outline-light">Appeler</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="wrap footer-main">
+      <div class="footer-cols">
+        <div>
+          <p class="footer-brand-word">Résidence Ivoire<span class="sub">Cotonou · Bénin</span></p>
+          <p class="footer-desc">Chambres d'hôtel modernes et appartements meublés à Agla, Cotonou — bar-restaurant, terrasse fleurie et accueil chaleureux.</p>
+          <div class="social-icons footer-social">
+            <a href="https://www.instagram.com/residence.ivoire.ctn" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+            <a href="https://www.facebook.com/share/1ESPT5MooX/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://vm.tiktok.com/ZS9BTaHk381GV-KoE0A/" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <nav aria-label="Navigation pied de page">
+            <a href="index.html">Accueil</a>
+            <a href="chambres.html">Chambres</a>
+            <a href="services.html">Services</a>
+            <a href="menu.html">Menu</a>
+            <a href="avis.html">Avis</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="https://wa.me/2290162265555" target="_blank" rel="noopener">WhatsApp — 01 62 26 55 55</a>
+          <a href="tel:+2290196152295">+229 01 96 15 22 95</a>
+          <a href="mailto:residenceivoire19@gmail.com">residenceivoire19@gmail.com</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=6.371333,2.360112" target="_blank" rel="noopener">Agla, Cotonou, Bénin</a>
+        </div>
+        <div class="footer-col">
+          <h4>Horaires</h4>
+          <span>Réception 24h/24</span>
+          <span>Check-in — 13h00</span>
+          <span>Check-out — 12h00</span>
+        </div>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <div class="footer-bottom-inner">
+        <span class="copyright">© <span data-year>2026</span> Résidence Ivoire Cotonou</span>
+        <div class="legal-links">
+          <a href="confidentialite.html">Confidentialité</a>
+          <a href="conditions.html">Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
