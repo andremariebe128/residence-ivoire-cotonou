@@ -139,6 +139,10 @@ header .bar {
   margin-top: .35em;
 }
 .main-nav { display: flex; align-items: center; gap: 2.5rem; }
+/* Les liens "Événements" sont masqués par défaut (anti-flash au chargement).
+   main.js ajoute .is-visible sur chacun uniquement si EVENTS_ACTIVE = true. */
+.js-events-link { display: none; }
+.js-events-link.is-visible { display: inline-block; }
 .nav-link {
   font-size: .8125rem; letter-spacing: .08em; text-transform: uppercase;
   color: var(--ink-soft); position: relative;

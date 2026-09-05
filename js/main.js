@@ -12,8 +12,8 @@ var EVENTS_ACTIVE = false;
 (function () {
   'use strict';
 
-  if (!EVENTS_ACTIVE) {
-    document.querySelectorAll('.js-events-link').forEach(function (el) { el.remove(); });
+  if (EVENTS_ACTIVE) {
+    document.querySelectorAll('.js-events-link').forEach(function (el) { el.classList.add('is-visible'); });
   }
 
   document.querySelectorAll('[data-year]').forEach(el => {
