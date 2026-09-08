@@ -1,0 +1,7 @@
+# Résidence Ivoire Cotonou
+# À MODIFIER : remplacez votredomaine.com par votre vrai domaine ci-dessous.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.votredomaine.com/sitemap.xml

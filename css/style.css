@@ -623,7 +623,7 @@ footer.site-footer { background: var(--ink); color: hsla(42, 25%, 94%, .82); }
 .menu-item .mname .desc { display: block; font-weight: 400; font-size: .8125rem; color: var(--ink-soft); font-family: var(--font-body); margin-top: .15em; }
 .menu-item .mfill { flex: 1; border-bottom: 1px dotted var(--sand); transform: translateY(-4px); }
 .menu-item .mprice { font-family: var(--font-display); font-size: 1.0625rem; color: var(--gold); white-space: nowrap; }
-.menu-photo-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 1.75rem; }
+.menu-photo-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-top: 1.75rem; }
 .menu-note {
   background: var(--cream-2); border: 1px solid var(--border); border-radius: var(--radius);
   padding: 1.5rem 1.75rem; margin-top: 1rem;
