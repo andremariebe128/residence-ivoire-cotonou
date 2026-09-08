@@ -7,7 +7,7 @@
    (desktop + mobile) sur toutes les pages. Repassez à false pour
    le masquer à nouveau une fois l'événement terminé.
    ========================================================== */
-var EVENTS_ACTIVE = false;
+var EVENTS_ACTIVE = true;
 
 (function () {
   'use strict';
